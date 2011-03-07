@@ -1,0 +1,18 @@
+<plugin name='portlets-gatein' version='0.1' grailsVersion='1.3.7 &gt; *'>
+  <author>Jakob Munih</author>
+  <authorEmail>munih@parsek.net</authorEmail>
+  <title>Gatein Portlets Plugin</title>
+  <description>\
+Generate JSR-168 compliant portlet war to use it in GateIN portal 3.1. 
+Based on original Grails portlets plugin.
+</description>
+  <documentation>http://grails.org/plugins/portlets-gatein</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+  </resources>
+  <dependencies />
+  <behavior />
+</plugin>
