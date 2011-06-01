@@ -1,5 +1,6 @@
 import groovy.xml.StreamingMarkupBuilder
 import org.codehaus.groovy.grails.commons.GrailsResourceUtils
+import org.codehaus.grails.portlets.GrailsDispatcherPortlet
 
 def portletVersion = '2.0'
 def basedir = System.getProperty("base.dir")
@@ -68,7 +69,7 @@ eventPackagingEnd = {
                         'value'('org.codehaus.grails.portlets.GrailsPortletApplicationContext')
                      }
                      'init-param' {
-                        'name'('grailsPortletClass')
+                        'name'(GrailsDispatcherPortlet.PORTLET_CLASS_PARAM)
                         'value'(className)
                      }
                      'init-param' {
