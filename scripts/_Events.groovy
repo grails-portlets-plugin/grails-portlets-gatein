@@ -57,11 +57,11 @@ eventPackagingEnd = {
                   checkRequiredProperties(['supports', 'title', 'displayName'], instance)
                   //TODO security constraints
                   portlet {
-                     'portlet-name'(portletName)
-                     'display-name'(instance.displayName)
                      if (hasProperty('description', instance)) {
                         'description'(instance.description)
-                     }
+                     }                  
+                     'portlet-name'(portletName)
+                     'display-name'(instance.displayName)
                      'portlet-class'('org.codehaus.grails.portlets.GrailsDispatcherPortlet')
                      'init-param' {
                         'name'('contextClass')
