@@ -170,7 +170,7 @@ eventWebXmlEnd = {String tmpfile ->
 
    // When running with JBoss (or GlassFish a.s.o) remove log4j configuration stuff
    def log4j = root.listener.findAll {node ->
-      node.'listener-class'.text() == 'org.codehaus.groovy.grails.web.util.Log4jConfigListener'
+      node.'listener-class'.text() == 'org.codehaus.groovy.grails.plugins.log4j.web.util.Log4jConfigListener'
    }
    log4j.replaceNode {}
 
@@ -180,7 +180,7 @@ eventWebXmlEnd = {String tmpfile ->
    log4jFile.replaceNode {}
 
    webXmlFile.text = new StreamingMarkupBuilder().bind {
-      mkp.declareNamespace("": "http://java.sun.com/xml/ns/j2ee")
+      mkp.declareNamespace("": "http://java.sun.com/xml/ns/javaee")
       mkp.yield(root)
    }
 }
